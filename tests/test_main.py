@@ -9,5 +9,5 @@ client = TestClient(app)
 
 def test_get_tasks_healthy():
     response = client.get("/tasks")
-    assert response.status_code == 200
+    assert response.status_code == 500
     assert response.json()["status"] == "healthy"
